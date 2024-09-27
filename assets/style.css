@@ -1,0 +1,187 @@
+/* Elimina margenes y rellenos*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* configuramos el tamaño del contenedor principal*/
+
+body {
+    /*width: 1920px;*/
+    /*height: 1080px;*/
+    width: 100vw;  /* ancho= 100% del viewport */
+    height: 56.25vw;  /* altura basada relacion 16:9*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+html, body {
+    height: 100%;  /* asegura que body ocupe el alto de la ventana*/
+}
+/* ponemos los contenedores principales del mismo tamaño para mantener la relacion entre ellos*/
+header, main, footer{
+    max-width: 1024px;
+    width: 100%;
+}
+
+/* dando forma al logo */
+.site-header .container .site-header-inner .logo-header {
+    /*background-color: #000000dc;*/
+    background-color: #7738c8;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25%;
+}
+.site-header .container .site-header-inner .logo-header img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* texto al lado del logo*/
+.site-header .container .site-header-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.site-header .container .site-header-inner h1 {
+    font-size: 2.2em;
+    color: #7738c8;
+    margin: 0;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+/* banner 01 catalogo*/
+/* colocamos los contenedores horizontalmente*/
+.catalogo .container .catalogo-inner {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    margin: 0;
+}
+
+/* titulo texto h1*/
+section.catalogo .catalogo-inner .catalogo-copy h1 {
+    font-size: 3em;
+    color: #1f2b35;
+    margin: 0;
+    padding: 10px 0;
+}
+/* texto p*/
+section.catalogo .catalogo-inner .catalogo-copy p.catalogo-paragraph {
+    color: #6f8394;
+    font-size: 1.3em;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+/* estilos para el boton*/
+section.catalogo .catalogo-inner .catalogo-copy .catalogo-cta .button-primary {
+    background-color: #7738c8;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.35em;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+section.catalogo .catalogo-inner .catalogo-copy .catalogo-cta .button-primary:hover {
+    background-color: #fff;
+    color: #7738c8;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+} 
+
+/* colocamos el cuadro de color atras de la img*/
+section.catalogo .catalogo-fondo-img {
+    background-color: #7738c8;
+    width: 40%;
+    height: 637px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.catalogo-illustration {
+    z-index: 999;
+}
+
+/* banner 02 informacion*/
+section.features {
+    padding: 40px 0;
+    margin: 0;
+}
+section.features .container .features-inner .features-wrap {
+    display: flex;
+    justify-content: space-between; /* espacio entre targetas*/
+    flex-wrap: wrap; /* para que se adapten a la pantalla*/
+    padding: 0;
+    margin: 0;
+}
+section.features .container .features-inner .features-wrap .feature {
+    flex: 1 1 30%;
+    margin: 0;
+    max-width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+section.features .container .features-inner .features-wrap .feature .feature-inner	{
+    padding: 20px 0;
+}
+section.features .container .features-inner .features-wrap .feature .feature-inner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+section.features .container .features-inner .features-wrap .feature .feature-inner .feature-title {
+    color: #1f2b35;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    padding: 0 30px;
+    text-align: center;
+}
+section.features .container .features-inner .features-wrap .feature .feature-inner .feature-text {
+    color: #6f8394;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0 20px;
+    text-align: justify;
+}
+section.features .section-square{
+    background-color: #f6f8fa;
+    width: 45%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+}
+
+/* Asegurarse que las tarjetas se ajusten en pantallas pequeñas */
+/*@media (max-width: 768px) {
+    section.features .container .features-inner	{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.features .container .features-inner .features-wrap .feature{
+        max-width: 90%; /* Asegura que ocupen el 90% del ancho en pantallas más pequeñas */
+  /*  }
+}*/
