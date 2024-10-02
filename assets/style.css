@@ -33,8 +33,8 @@ header, main, footer{
 .site-header .container .site-header-inner .logo-header {
     /*background-color: #000000dc;*/
     background-color: #7738c8;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,12 +173,177 @@ section.features .section-square{
     left: 0;
     z-index: 10;
 }
+section.pricing {
+    margin: 40px 0;
+    padding: 70px 0 0 0;
+    border-top: 2px solid #7738c8;    
+}
+
+/* banner como crear un sitio web*/
+section.pricing .container .pricing-inner .pricing-tables-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* espacio entre las tarjetas*/
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table {
+    flex: 1;
+    margin: 0;
+    min-width: 300px;
+    max-width: 33.33%;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;/* distribuye el contenido de manera uniforme*/
+    text-align: center;
+}
+section.pricing .container .pricing-inner .section-title {
+    font-size: 2.7em;
+    color: #1f2b35;
+    text-align: center;
+    z-index: 9999;
+    margin: 0;
+    padding: 0 0 80px 0;
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* alinea verticalmente*/
+    
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-main .feature-title{
+    color: #1f2b35;
+    font-size: 1.5em;
+    font-weight: bold;
+    min-height: 70px; /* define la altura min para  el titulo*/
+    margin: 0px 15px;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-main .feature-text {
+    color: #6f8394;
+    font-size: 1.1em;
+    margin: 0 0 20px 0;
+    min-height: 100px; /* Define una altura mínima para el texto */
+    padding: 0 20px;
+    text-align: justify;
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-cta{
+    margin-top: auto; /* empuja el boton hacia la parte inferior*/
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-cta .button-block{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7738c8;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-table .pricing-table-inner .pricing-table-cta .button-block:hover {
+    background-color: #fff;
+    color: #7738c8;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+}
+section.pricing .section-square {
+    background-color: #f6f8fa;
+    width: 45%;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 170%;
+}
+section.pricing::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 188%;
+    width: 100%;
+    height: 200px;
+    background-color: #1f2b35;
+    overflow: hidden;
+}
+
+/*footer*/
+
+footer.site-footer {
+    background-color: #1f2b35; /* Cambia este color según tus necesidades */
+    color: white;
+    max-width: 1920px; /* Asegura que el ancho ocupe toda la ventana */
+    margin-left: calc(50% - 50vw); /* Alinea el footer al centro y ocupa todo el ancho de la página */
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px 0; /* Espaciado en la parte superior e inferior */
+  }
+  
+  footer.site-footer .container {
+    max-width: 1024px; /* O el valor que prefieras */
+    margin: 0 auto;
+    border-top: 2px solid rgba(255,255,255,.08);
+  }
+  footer.site-footer .container .site-footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0 40px 0;
+  }
+
+  footer.site-footer .container .site-footer-inner .footer-links, .footer-secondary-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li, .footer-secondary-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-links a, .footer-secondary-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover, .footer-secondary-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-brand img {
+    max-width: 150px; /* Ajusta el tamaño del logo si es necesario */
+  }
+
+
+
 
 /* Asegurarse que las tarjetas se ajusten en pantallas pequeñas */
 /*@media (max-width: 768px) {
     section.features .container .features-inner	{
         flex-direction: column;
         align-items: center;
+    }
+    section.pricing .container .pricing-inner .pricing-tables-wrap .pricing-tables {
+    max-width: 100%;
     }
 
     section.features .container .features-inner .features-wrap .feature{
